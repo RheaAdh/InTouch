@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "InTouch",
+    "slug": "InTouch",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
