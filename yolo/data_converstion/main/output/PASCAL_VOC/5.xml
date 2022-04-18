@@ -1,0 +1,26 @@
+<annotation>
+  <folder>input</folder>
+  <filename>5.png</filename>
+  <path>C:\Users\rhea_\Desktop\Yolo-Training-GoogleColab\data_converstion\main\input\5.png</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>145</width>
+    <height>145</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>camera</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>39</xmin>
+      <ymin>46</ymin>
+      <xmax>104</xmax>
+      <ymax>96</ymax>
+    </bndbox>
+  </object>
+</annotation>

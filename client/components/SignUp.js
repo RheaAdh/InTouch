@@ -13,9 +13,7 @@ import './SignUp.css';
 import axios from 'axios';
 export default function SignUp({ navigation }) {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [phone, setPhone] = useState('');
 
   const handleRegister = () => {
     console.log('sup');
@@ -34,23 +32,9 @@ export default function SignUp({ navigation }) {
       />
       <TextInput
         style={{ height: 40 }}
-        placeholder="Email ID"
-        onChangeText={(newText) => setEmail(newText)}
-        defaultValue={email}
-      />
-      <TextInput
-        secureTextEntry={true}
-        style={{ height: 40 }}
-        placeholder="Password"
-        onChangeText={(newText) => setPassword(newText)}
-        defaultValue={password}
-      />
-      <TextInput
-        secureTextEntry={true}
-        style={{ height: 40 }}
-        placeholder="Confirm Password"
-        onChangeText={(newText) => setConfirmPassword(newText)}
-        defaultValue={confirmPassword}
+        placeholder="Phone Number"
+        onChangeText={(newText) => setPhone(newText)}
+        defaultValue={phone}
       />
       <Button onPress={handleRegister} title="Register" color="#841584" />
       <StatusBar style="auto" />
