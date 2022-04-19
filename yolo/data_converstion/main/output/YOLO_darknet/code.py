@@ -8,13 +8,15 @@ with open("output_file.txt", "w") as outfile:
         with open(filename) as infile:
             contents = infile.read()
             nums = [float(n) for n in contents.split(" ")]
-            print(nums)
+            temp = ""
+            for j in range(1, len(nums)):
+                temp = temp+str(nums[j])+","
             te = ""
             if i <= 10:
-                te = "\nTEST"+str(nums)
+                te = "\nTEST,PATH,camera,"+temp
             elif i <= 20:
-                te = "\nTRAIN"+str(nums)
+                te = "\nTRAIN,PATH,camera,"+temp
             else:
-                te = "\nVALIDATE"+str(nums)
+                te = "\nVALIDATE,PATH,camera,"+temp
             i += 1
             outfile.write(te)
