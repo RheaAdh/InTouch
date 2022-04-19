@@ -11,4 +11,16 @@
     <depth>3</depth>
   </size>
   <segmented>0</segmented>
+  <object>
+    <name>camera</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>225</xmin>
+      <ymin>74</ymin>
+      <xmax>247</xmax>
+      <ymax>93</ymax>
+    </bndbox>
+  </object>
 </annotation>
