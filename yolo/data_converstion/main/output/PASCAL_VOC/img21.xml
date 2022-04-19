@@ -1,0 +1,26 @@
+<annotation>
+  <folder>input</folder>
+  <filename>img21.jpg</filename>
+  <path>C:\Users\rhea_\Desktop\InTouch\yolo\data_converstion\main\input\img21.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>300</width>
+    <height>168</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>camera</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>142</xmin>
+      <ymin>130</ymin>
+      <xmax>169</xmax>
+      <ymax>155</ymax>
+    </bndbox>
+  </object>
+</annotation>

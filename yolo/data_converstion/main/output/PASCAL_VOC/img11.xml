@@ -1,0 +1,14 @@
+<annotation>
+  <folder>input</folder>
+  <filename>img11.jpg</filename>
+  <path>C:\Users\rhea_\Desktop\InTouch\yolo\data_converstion\main\input\img11.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>217</width>
+    <height>232</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>
