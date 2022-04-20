@@ -1,7 +1,7 @@
-#Wed Apr 20 15:19:23 IST 2022
-base.1=C\:\\Users\\rhea_\\Downloads\\odml-pathways-main\\odml-pathways-main\\object-detection\\codelab2\\android\\final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+#Wed Apr 20 23:20:52 IST 2022
+base.1=C\:\\Users\\rhea_\\Desktop\\InTouch\\final\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
 path.1=classes.dex
-base.0=C\:\\Users\\rhea_\\Downloads\\odml-pathways-main\\odml-pathways-main\\object-detection\\codelab2\\android\\final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.0=C\:\\Users\\rhea_\\Desktop\\InTouch\\final\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
 path.0=classes.dex

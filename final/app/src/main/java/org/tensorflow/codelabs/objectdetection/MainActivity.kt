@@ -100,13 +100,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
             R.id.imgSampleOne -> {
-                setViewAndDetect(getSampleImage(R.drawable.img_meal_one))
+                setViewAndDetect(getSampleImage(R.drawable.img1))
             }
             R.id.imgSampleTwo -> {
-                setViewAndDetect(getSampleImage(R.drawable.img_meal_two))
+                setViewAndDetect(getSampleImage(R.drawable.img2))
             }
             R.id.imgSampleThree -> {
-                setViewAndDetect(getSampleImage(R.drawable.img_meal_three))
+                setViewAndDetect(getSampleImage(R.drawable.img3))
             }
         }
     }
@@ -118,7 +118,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun runObjectDetection(bitmap: Bitmap) {
         // Step 1: Create TFLite's TensorImage object
         val image = TensorImage.fromBitmap(bitmap)
-
+        System.out.println(image)
         // Step 2: Initialize the detector object
         val options = ObjectDetector.ObjectDetectorOptions.builder()
                 .setMaxResults(5)
