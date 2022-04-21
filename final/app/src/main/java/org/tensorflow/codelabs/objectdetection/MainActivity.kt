@@ -16,6 +16,11 @@
 
 package org.tensorflow.codelabs.objectdetection
 
+//import android.speech.tts.TextToSpeech
+//import android.support.v7.app.AppCompactActivity
+//import android.os.bundle
+
+import java.util.Locale
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -24,6 +29,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
+import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
 import android.widget.Button
@@ -45,7 +51,12 @@ import java.util.*
 import kotlin.math.max
 import kotlin.math.min
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+
+
+
+class MainActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
+    private lateinit var tts:TextToSpeech;
+
     companion object {
         const val TAG = "TFLite - ODT"
         const val REQUEST_IMAGE_CAPTURE: Int = 1
@@ -75,6 +86,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         imgSampleOne.setOnClickListener(this)
         imgSampleTwo.setOnClickListener(this)
         imgSampleThree.setOnClickListener(this)
+        tts = TextToSpeech(this, this)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -132,13 +144,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         // Step 3: Feed given image to the detector
         val results = detector.detect(image)
-
+//        textToSpeech=new TextToSpeech()
+//        textToSpeech.setLanguage(Locale.ENGLISH)
         // Step 4: Parse the detection result and show it
         val resultToDisplay = results.map {
             // Get the top-1 category and craft the display text
             val category = it.categories.first()
             val text = "${category.label}, ${category.score.times(100).toInt()}%"
-
+            val speakers1="${category.label}}"
+            speakOut(speakers1)
             // Create a data object to display the detection result
             DetectionResult(it.boundingBox, text)
         }
@@ -148,7 +162,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             inputImageView.setImageBitmap(imgWithResult)
         }
     }
-
+    private fun speakOut(text: String) {
+        tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null,"")
+    }
     /**
      * debugPrint(visionObjects: List<Detection>)
      *      Print the detection result to logcat to examine
@@ -347,6 +363,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             )
         }
         return outputBitmap
+    }
+
+    override fun onInit(p0: Int) {
     }
 }
 
